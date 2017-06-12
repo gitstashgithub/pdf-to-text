@@ -48,10 +48,10 @@ class Pdf
     {
         return json_encode($this->array());
     }
-    public static function getText(string $pdf, string $binPath = null) : string
+    public static function getText(string $pdf, string $binPath = null, $flag = NULL) : string
     {
         return (new static($binPath))
             ->setPdf($pdf)
-            ->text();
+            ->text($flag);
     }
 }
